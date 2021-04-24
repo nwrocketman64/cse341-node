@@ -1,0 +1,15 @@
+{
+  "name": "week1-assignment",
+  "version": "1.0.0",
+  "description": "Week 1 Assignment",
+  "main": "prove01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prove01": "nodemon prove01.js"
+  },
+  "author": "Nathan Webb",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
