@@ -26,8 +26,14 @@ app.get('/', (req, res, next) => {
     res.render('products', {products: products});
 });
 
+// The add book page.
+app.get('/add-product', (req, res, next) => {
+    // Deliver the add book view.
+    res.render('add-products');
+});
+
 // Add the product to the list from the default page.
-app.post('/add-product', (req, res, next) => {
+app.post('/create-product', (req, res, next) => {
     // Add the product to the list/
     products.push({ title: req.body.title, descript: req.body.descript, price: req.body.price });
     
