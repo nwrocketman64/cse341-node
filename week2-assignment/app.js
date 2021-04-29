@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 // Create the web app.
 const app = express();
+const PORT = process.env.PORT || 5000
 
 // Set render
 app.set('view engine', 'ejs');
@@ -47,5 +48,5 @@ app.use((req, res, next) => {
 });
 
 // Have the app listen on port 3000.
-console.log('Listening on port 3000');
-app.listen(3000);
+console.log('Listening on port 5000');
+app.listen(PORT);
