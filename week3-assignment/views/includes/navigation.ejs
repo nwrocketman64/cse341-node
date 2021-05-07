@@ -1,0 +1,19 @@
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+                    </li>
+                    <li>
+                        <a class="<%= path === '/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product</a>
+                    </li>
+                    <li>
+                        <a class="<%= path === '/edit-products' ? 'active' : '' %>" href="/admin/edit-products">Edit Products</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1><%= pageTitle %></h1>
+        </header>

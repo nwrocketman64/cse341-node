@@ -1,0 +1,20 @@
+<%- include('../includes/head.ejs') %>
+
+<%- include('../includes/navigation.ejs') %>
+    <section>
+        <h2>Enter a Book</h2>
+        <form action="/admin/update-product" method="POST">
+            <label for="title">Title: </label>
+            <input type="text" name="title" value="<%= product.title %>">
+            <label for="descript">Description: </label>
+            <input type="text" name="descript" value="<%= product.description %>">
+            <label for="price">Price: $</label>
+            <input type="text" name="price" value="<%= product.price %>">
+            <label for="imageUrl">Image URL: </label>
+            <input type="text" name="imageUrl" value="<%= product.imageUrl %>">
+            <input type="hidden" value="<%= product.id %>" name="productId">
+            <button type="submit">Edit Product</button>
+        </form>
+    </section>
+
+<%- include('../includes/end.ejs') %>
