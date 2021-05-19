@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>Style: <%= style %></p>
+    <p>Counter: <%= counter %></p>
+  </div>
+</div>
+<div class="container">
+  <form action="/ta04/change-style" method="POST">
+    <label for="style">Style: </label>
+    <input type="text" name="style">
+    <button type="submit">Change</button>
+  </form>
+  <form action="/ta04/counter" method="POST">
+    <input type="hidden" name="change" value="up">
+    <button type="submit">Up</button>
+  </form>
+  <form action="/ta04/counter" method="POST">
+    <input type="hidden" name="change" value="down">
+    <button type="submit">Down</button>
+  </form>
+  <form action="/ta04/reset" method="POST">
+    <input type="hidden" name="change" value="up">
+    <button type="submit">Reset</button>
+  </form>
+</div>
+
+
+</body>
+</html>
